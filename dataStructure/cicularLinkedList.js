@@ -1,9 +1,9 @@
-class Node {
-    constructor(data = null, next = null) {
-        this.data = data
-        this.next = next;
-    }
-}
+// class Node {
+//     constructor(data = null, next = null) {
+//         this.data = data
+//         this.next = next;
+//     }
+// }
 
 class CicularLinkedList {
     constructor() {
@@ -103,14 +103,19 @@ class CicularLinkedList {
             }
         }
     }
+
+    size() {
+        return this.size
+    }
 }
 
-const cicularLinkedList = new CicularLinkedList()
 
-cicularLinkedList.addLast(1)
-cicularLinkedList.addLast(2)
-cicularLinkedList.addLast(3)
-cicularLinkedList.removeFirst()
-cicularLinkedList.removeFirst()
+// const cicularLinkedList = new CicularLinkedList()
 
-console.log(cicularLinkedList)
+// cicularLinkedList.addLast(1)
+// cicularLinkedList.addLast(2)
+// cicularLinkedList.addLast(3)
+// cicularLinkedList.removeFirst()
+// cicularLinkedList.removeFirst()
+
+// console.log(cicularLinkedList)

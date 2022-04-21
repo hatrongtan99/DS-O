@@ -35,8 +35,8 @@ class SingleLinkedList {
                 lastNode = lastNode.next
             }
             lastNode.next = new Node(element);
-            this.size ++
         }
+        this.size++
     }
 
     addAt(position ,element) {
@@ -142,4 +142,34 @@ class SingleLinkedList {
         }
         return lastNode.data
     }
+
+
+    indexOf(value) {
+        if (this.isEmpty()) {
+            return -1
+        } else {
+            let index = 0
+            const recusive = (node) => {
+                if (node == null) return -1
+                else {
+                   if (node.data == value) return index
+                   else {
+                       index++ 
+                       return recusive(node.next)
+                   }
+                }
+            }
+
+           return recusive(this.head)
+        }
+    }
 }
+
+// const test = new SingleLinkedList()
+
+// test.addLast(1)
+// test.addLast(2)
+// test.addLast(3)
+// test.addLast(4)
+
+// console.log(test)

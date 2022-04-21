@@ -59,21 +59,16 @@ class SingleStack {
 
 class DynamicStack extends SingleStack {
 
-    constructor() {
-        super();
-        this.capacity = 5
-    }
+    // constructor() {
+    //     super();
+    //     this.capacity = 5
+    // }
     
     push(value) {
-        if (this.index == this.capacity + 1) {
-            const newDynamicStack = new DynamicStack()
-            this.capacity = this.capacity + 5
-            this.index++
-            this.lists[this.index] = value
-        } else {
-            this.index++
-            this.lists[this.index] = value
+        if (this.index == this.capacity - 1) {
+            this.capacity *= 2
         }
+        super.push(value)
     }
 }
 
@@ -86,7 +81,7 @@ class DynamicStack extends SingleStack {
 // dynamicStack.push(5)
 // dynamicStack.push(6)
 // dynamicStack.push(7)
-// dynamicStack.pop()
+// // dynamicStack.pop()
 
 // console.log(dynamicStack)
 // console.log(dynamicStack.capacity)
