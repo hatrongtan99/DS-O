@@ -4,7 +4,7 @@ function longSubarrWthSumDivByK(arr, n, k) {
     let max = 0
     let currentSum = 0
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < n; i++) {
         currentSum += arr[i]
 
         const rest = currentSum % k
